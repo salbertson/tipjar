@@ -3,5 +3,5 @@ Tiptip::Application.routes.draw do
     resources :tip_codes, only: [:show], defaults: { format: :json }
   end
 
-  resources :tip_codes, only: [:show]
+  root to: 'application#index'
 end
