@@ -4,4 +4,6 @@ class User < ActiveRecord::Base
   has_one :tip_code
 
   before_create { |user| user.build_tip_code }
+
+  validate :name, presence: true
 end
