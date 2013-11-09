@@ -1,4 +1,4 @@
-class Api::TipCodesController < ApplicationController
+class Api::TipCodesController < Api::BaseController
   respond_to :json
 
   def show
