@@ -11,7 +11,7 @@ class Api::BaseController < ApplicationController
   end
 
   def authorize
-    unless AccessToken.exists?(token: params[:token])
+    unless ApiToken.exists?(token: params[:api_token])
       render text: "Please provide a valid access token.\n", status: :unauthorized
     end
   end
