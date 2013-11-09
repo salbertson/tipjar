@@ -1,6 +1,6 @@
 Tiptip::Application.routes.draw do
   namespace :api, defaults: { format: :json } do
-    resources :tip_codes, only: [:show]
+    resources :codes, only: [:show]
 
     resources :users, shallow: true do
       resources :tips, only: [:create]
