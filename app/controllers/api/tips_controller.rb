@@ -4,7 +4,6 @@ class Api::TipsController < Api::BaseController
 
     respond_with(
       user.tips.create(amount: params[:amount]),
-      root: false,
       location: nil
     )
   end

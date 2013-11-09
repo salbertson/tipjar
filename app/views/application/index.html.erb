@@ -1,4 +1,4 @@
 <% if signed_in? %>
   <h2>Hey <%= current_user.name %>!</h2>
-  <%= image_tag "https://chart.googleapis.com/chart?cht=qr&chs=150x150&chl=#{current_user.tip_code.id}" %>
+  <%= image_tag "https://chart.googleapis.com/chart?cht=qr&chs=150x150&chl=#{current_user.tip_code.token}" %>
 <% end %>
