@@ -1,13 +1,11 @@
 Tiptip::Application.routes.draw do
-  namespace :api do
-    resources :tip_codes, only: [:show], defaults: { format: :json }
+  namespace :api, defaults: { format: :json } do
+    resources :tip_codes, only: [:show]
 
     resources :users, shallow: true do
-      resources :tips, only: [:create], defaults: { format: :json }
+      resources :tips, only: [:create]
     end
   end
-
-  resources :tips, only: [:show]
 
   root to: 'application#index'
 end

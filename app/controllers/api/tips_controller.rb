@@ -3,6 +3,10 @@ class Api::TipsController < ApplicationController
 
   def create
     user = User.find(params[:user_id])
-    respond_with user.tips.create(amount: params[:amount])
+
+    respond_with(
+      user.tips.create(amount: params[:amount]),
+      location: nil
+    )
   end
 end
