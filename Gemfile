@@ -46,3 +46,4 @@ end
 
 gem 'clearance'
 gem 'active_model_serializers'
+gem 'protected_attributes'

@@ -7,4 +7,6 @@ class User < ActiveRecord::Base
   before_create { |user| user.build_tip_code }
 
   validate :name, presence: true
+
+  attr_accessible :name
 end
