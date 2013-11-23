@@ -46,7 +46,6 @@ ActiveRecord::Schema.define(version: 20131120005255) do
     t.string   "remember_token",     limit: 128, null: false
     t.string   "name"
     t.string   "stripe_customer_id"
-    t.string   "token"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", using: :btree
